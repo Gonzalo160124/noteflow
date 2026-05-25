@@ -1,0 +1,35 @@
+# NoteFlow – Cursor Rules
+
+## Contexto del proyecto
+App de productividad móvil con React Native, Expo SDK 56 y TypeScript.
+
+## Stack
+- React Native + Expo SDK 56
+- TypeScript estricto
+- Expo Router (navegación por sistema de archivos)
+- Zustand (estado global)
+- AsyncStorage (persistencia)
+- FlashList de Shopify (listas)
+- Zod (validación de formularios)
+- Gluestack UI (librería de componentes)
+
+## Convenciones de nombre
+- Componentes: PascalCase → NoteCard.tsx
+- Hooks: prefijo use → useNotes.ts
+- Stores: camelCase → notesStore.ts
+- Carpetas: minúsculas → components/
+
+## Estructura de carpetas
+- app/ → rutas Expo Router
+- components/ → componentes reutilizables
+- store/ → stores Zustand
+- types/ → interfaces TypeScript
+- constants/ → tokens de diseño
+- docs/ → documentación
+
+## Restricciones importantes
+- NUNCA usar Context API para estado global, usar Zustand
+- NUNCA usar FlatList, usar FlashList
+- NUNCA usar navegación manual, usar Expo Router
+- Toda interfaz debe estar en types/index.ts
+- Respetar el sistema de diseño de constants/theme.ts
