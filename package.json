@@ -1,7 +1,7 @@
 {
   "name": "noteflow",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "dependencies": {
     "expo": "~56.0.4",
     "expo-constants": "~56.0.15",

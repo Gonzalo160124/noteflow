@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "noteflow",
+    "scheme": "noteflow",
     "slug": "noteflow",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -25,5 +26,6 @@
       "expo-router",
       "expo-status-bar"
     ]
+    
   }
 }
