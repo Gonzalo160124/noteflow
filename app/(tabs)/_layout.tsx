@@ -1,8 +1,12 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
 import { colors } from '../../constants/theme';
 
 export default function TabsLayout() {
+  const router = useRouter();
+
   return (
     <Tabs
       screenOptions={{
@@ -10,6 +14,14 @@ export default function TabsLayout() {
         tabBarInactiveTintColor: '#6B7280',
         tabBarStyle: { borderTopWidth: 1 },
         headerShown: true,
+        headerRight: () => (
+          <TouchableOpacity
+            onPress={() => router.push('/nueva-nota')}
+            style={{ marginRight: 16 }}
+          >
+            <Ionicons name="add-circle-outline" size={28} color={colors.primary} />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Tabs.Screen
@@ -39,6 +51,9 @@ export default function TabsLayout() {
           ),
         }}
       />
+      <Tabs.Screen name="notas/[id]" options={{ href: null }} />
+      <Tabs.Screen name="checklists/[id]" options={{ href: null }} />
+      <Tabs.Screen name="ideas/[id]" options={{ href: null }} />
     </Tabs>
   );
 }
